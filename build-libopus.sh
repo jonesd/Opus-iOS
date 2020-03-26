@@ -23,7 +23,7 @@
 #  Choose your libopus version and your currently-installed iOS SDK version:
 #
 VERSION="1.3"
-SDKVERSION="10.2"
+SDKVERSION=$(xcrun --sdk iphoneos --show-sdk-version)
 MINIOSVERSION="8.0"
 
 ###########################################################################
@@ -46,7 +46,6 @@ fi
 
 
 # No need to change this since xcode build will only compile in the
-# necessary bits from the libraries we create
 ARCHS="i386 x86_64 armv7 armv7s arm64"
 
 DEVELOPER=`xcode-select -print-path`
